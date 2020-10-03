@@ -1,31 +1,101 @@
-# TARGET=~/.config/Code/User/settings.json 
+# TARGET=~/Library/ApplicationSupport/Code/User/settings.json
 {
-    "window.zoomLevel": 1,
-    
-    "workbench.colorTheme": "Pitch Black",
-    "workbench.iconTheme": "ayu",
-    "workbench.settings.editor": "json",
-    "workbench.colorCustomizations": { "editorWhitespace.foreground": "#000"},
-    
-    "explorer.sortOrder": "type",
-    
-    "editor.lineNumbers": "relative",
-
-    "python.formatting.provider": "black",
-
-
-    "files.trimFinalNewlines": true,
-
-    "keyboard.dispatch": "keyCode",
-    "vim.easymotion": true,
-    "vim.easymotionMarkerBackgroundColor": "green",
-    "vim.easymotionMarkerFontFamily": "'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
-    "vim.easymotionMarkerHeight": 19,
-    "vim.normalModeKeyBindings": [
-        {
-        "before": [" "],
-        "after": ["leader", "leader", "leader", "b", "d", "w"]
-        }
-    ],
-    "vim.useSystemClipboard": true
+  "window.zoomLevel": 2,
+  "workbench.colorTheme": "Predawn",
+  "workbench.iconTheme": "material-icon-theme",
+  "workbench.settings.editor": "json",
+  "workbench.settings.useSplitJSON": true,
+  "python.linting.pylintArgs": [
+    "--load-plugins",
+    "pylint_django"
+  ],
+  "python.pythonPath": "/Users/macuared/venvs/py3/bin/python3.7",
+  "python.formatting.provider": "black",
+  // https://trevorsullivan.net/2019/06/11/intellisense-microsoft-vscode-aws-boto3-python/
+  "python.jediEnabled": false,
+  "editor.formatOnSave": true,
+  "editor.fontSize": 12,
+  "editor.lineNumbers": "relative",
+  //"code-runner.executorMap": {
+  //  "python": "$pythonPath -u $fullFileName"
+  //},
+  "code-runner.showExecutionMessage": false,
+  "code-runner.clearPreviousOutput": true,
+  "git.autofetch": true,
+  "git.autofetchPeriod": 120,
+  "workbench.sideBar.location": "right",
+  "remote.SSH.configFile": "/Users/macuared/.ssh/config",
+  "remote.SSH.showLoginTerminal": true,
+  "git.ignoreLegacyWarning": true,
+  "terminal.integrated.scrollback": 10000,
+  "terminal.integrated.fontFamily": "MesloLGS NF",
+  "terminal.external.linuxExec": "iterm",
+  "terminal.external.osxExec": "iterm.app",
+  "python.dataScience.sendSelectionToInteractiveWindow": true,
+  "terminal.integrated.shell.osx": "/bin/zsh",
+  // VIM
+  "vim.easymotion": true,
+  "vim.easymotionMarkerBackgroundColor": "green",
+  "vim.easymotionMarkerFontFamily": "MesloLGS NF",
+  "vim.easymotionMarkerHeight": 19,
+  "vim.normalModeKeyBindings": [
+    {
+      "before": [
+        " "
+      ],
+      "after": [
+        "leader",
+        "leader",
+        "leader",
+        "b",
+        "d",
+        "w"
+      ]
+    }
+  ],
+  "vim.useSystemClipboard": true,
+  // For Cloudformation YAML
+  "yaml.customTags": [
+    "!And",
+    "!If",
+    "!Not",
+    "!Equals",
+    "!Or",
+    "!FindInMap sequence",
+    "!Base64",
+    "!Cidr",
+    "!Ref",
+    "!Sub",
+    "!GetAtt",
+    "!GetAZs",
+    "!ImportValue",
+    "!Select",
+    "!Select sequence",
+    "!Split",
+    "!Join sequence",
+    "!And sequence",
+    "!If sequence",
+    "!Not sequence",
+    "!Equals sequence",
+    "!Or sequence",
+    "!FindInMap",
+    "!Join",
+    "!Sub sequence",
+    "!ImportValue sequence",
+    "!Split sequence"
+  ],
+  "[yaml]": {
+    "editor.tabSize": 4,
+    "editor.insertSpaces": true,
+    "editor.detectIndentation": true
+  },
+  "todo-tree.tree.showScanModeButton": false,
+  "yaml.validate": false,
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "debug.allowBreakpointsEverywhere": true
 }
