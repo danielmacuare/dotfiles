@@ -89,6 +89,11 @@ plugins=(
 export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
 export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
 
+# Open SSL https://stackoverflow.com/questions/41328451/ssl-module-in-python-is-not-available-when-installing-package-with-pip3
+export PATH="/usr/local/opt/openssl@1.1/bin:$PATH"
+export LDFLAGS="-L/usr/local/opt/openssl/lib"
+export CPPFLAGS="-I/usr/local/opt/openssl/include"
+
 
 # Export my locale settings
 export LC_ALL=en_GB.UTF-8  
@@ -125,3 +130,9 @@ source ~/venvs/py3/bin/activate
 # FUNCTIONS
 # This is to send the output of ssh to chromaterm
 ssh() { /usr/bin/ssh "$@" | ct; }
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/macuared/repos/dbt/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/macuared/repos/dbt/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/macuared/repos/dbt/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/macuared/repos/dbt/google-cloud-sdk/completion.zsh.inc'; fi
