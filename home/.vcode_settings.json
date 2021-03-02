@@ -14,6 +14,7 @@
   // https://trevorsullivan.net/2019/06/11/intellisense-microsoft-vscode-aws-boto3-python/
   "python.jediEnabled": false,
   "editor.formatOnSave": true,
+  "editor.formatOnPaste": true,
   "editor.fontSize": 12,
   "editor.lineNumbers": "relative",
   //"code-runner.executorMap": {
@@ -97,5 +98,16 @@
   "[jsonc]": {
     "editor.defaultFormatter": "vscode.json-language-features"
   },
-  "debug.allowBreakpointsEverywhere": true
+  "debug.allowBreakpointsEverywhere": true,
+  "python.languageServer": "Microsoft",
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "emmet.triggerExpansionOnTab": true,
+  "emmet.includeLanguages": {
+    "javascript": "javascriptreact",
+    "vue-html": "html",
+    "php": "html",
+    "blade": "html",
+  },
 }
