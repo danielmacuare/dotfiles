@@ -2,7 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH=/Users/macuared/.oh-my-zsh
+export ZSH=$HOME/.oh-my-zsh
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
@@ -122,10 +122,8 @@ bindkey '^@' end-of-line
 
 # SOURCING FILES
 source $HOME/.aliases
-source ~/.work_aliases
+source $HOME/.work_aliases
 source $ZSH/oh-my-zsh.sh
-source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source ~/venvs/py3/bin/activate
 
 # FUNCTIONS
 # This is to send the output of ssh to chromaterm
@@ -136,3 +134,5 @@ if [ -f '/Users/macuared/repos/dbt/google-cloud-sdk/path.zsh.inc' ]; then . '/Us
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/macuared/repos/dbt/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/macuared/repos/dbt/google-cloud-sdk/completion.zsh.inc'; fi
+
+
